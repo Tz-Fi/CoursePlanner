@@ -1,5 +1,5 @@
 import React from "react";
-import {UI_STRINGS, EXPORT_TYPES} from "./util";
+import {UI_STRINGS, EXPORT_TYPES, URLS} from "./util";
 import IconButton from 'material-ui/IconButton';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
@@ -38,7 +38,7 @@ export class AppBarMenu extends React.Component {
                           onClick={() => this.props.onSelectProgramChange(undefined)}/>
                 <MenuItem primaryText="Feedback"/>
                 <MenuItem primaryText="View on GitHub"
-                        onClick={() => window.open("https://github.com/stumash/CoursePlanner")}/>
+                          onClick={() => {window.open(URLS.REPO); console.log(URLS.REPO)}}/>
             </IconMenu>
         );
     }

@@ -306,7 +306,7 @@ public class SequenceValidator extends CPServlet {
 
         for (String courseCode : cc2ci.keySet()) {
             ArrayList<Point> courseOccurences = cc2ci.get(courseCode);
-            if (courseOccurences.size() > 1) {
+            if (courseOccurences.size() > 1 && courseCode.substring(courseCode.length()-3) !="490") {
                 sequenceIsValid = false;
 
                 JSONArray positions = new JSONArray();
